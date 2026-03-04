@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-accent-green: #621214;
+  --color-accent-rust: #E10613;
+  --color-footer-bg: #0A0A0A;
+  --color-footer-text: #FFFFFF;
+  --color-footer-muted: #888888;
+  --color-nav-scrolled: #F2F2F2;
+
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* ── Hero staggered entry ── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-stagger-1 { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.23,1,.32,1) 0.1s forwards; }
+.hero-stagger-2 { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.23,1,.32,1) 0.25s forwards; }
+.hero-stagger-3 { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.23,1,.32,1) 0.4s forwards; }
+.hero-stagger-4 { opacity: 0; animation: heroFadeUp 0.7s cubic-bezier(.23,1,.32,1) 0.55s forwards; }
+
+
+
+/* ── Brand wordmark clipping ── */
+/* ── Hide scrollbar on filter bar ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ── Page fade transition ── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-fade-in { animation: pageFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+.brand-wordmark-text {
+  font-family: var(--font-display);
+  background-image: linear-gradient(135deg, #8B5E3C 0%, #D4915A 20%, #C47A3A 40%, #A0522D 55%, #6B3A1F 70%, #D4A06A 85%, #8B6914 100%);
+  background-size: 120% 120%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

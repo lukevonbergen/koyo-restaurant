@@ -1,6 +1,12 @@
 import { Logo } from '../components/Layout'
+import useSEO from '../hooks/useSEO'
 
 export default function JobsPage() {
+  useSEO({
+    title: 'Careers',
+    description: 'Join the KOYO team. We are always looking for great people to work at our Japanese restaurants in Amersham and Beaconsfield.',
+  })
+
   return (
     <main className="bg-bg min-h-screen">
       {/* Hero banner */}

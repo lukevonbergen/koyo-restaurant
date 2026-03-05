@@ -1,6 +1,12 @@
 import { Logo } from '../components/Layout'
+import useSEO from '../hooks/useSEO'
 
 export default function AboutPage() {
+  useSEO({
+    title: 'About Us',
+    description: 'Learn about KOYO Japanese Tapasu Bar — authentic sushi with attitude. Founded by Alex Young, serving high-quality Japanese food in Amersham and Beaconsfield.',
+  })
+
   return (
     <main className="bg-bg min-h-screen">
       {/* Hero banner */}

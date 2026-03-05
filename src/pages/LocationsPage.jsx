@@ -1,4 +1,5 @@
 import { Logo, ArrowIcon, CtaFlip } from '../components/Layout'
+import useSEO from '../hooks/useSEO'
 
 const LOCATIONS = [
   {
@@ -30,6 +31,11 @@ const LOCATIONS = [
 ]
 
 export default function LocationsPage() {
+  useSEO({
+    title: 'Locations',
+    description: 'Find KOYO Japanese Tapasu Bar in Amersham and Beaconsfield, Buckinghamshire. Opening hours, addresses and directions for both restaurants.',
+  })
+
   return (
     <main className="bg-bg min-h-screen">
       {/* Hero banner */}

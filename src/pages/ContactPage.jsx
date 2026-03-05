@@ -1,6 +1,12 @@
 import { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 
 export default function ContactPage() {
+  useSEO({
+    title: 'Contact',
+    description: 'Get in touch with KOYO Japanese Tapasu Bar. Book a table, ask about our menu or send us a message. Restaurants in Amersham and Beaconsfield.',
+  })
+
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 

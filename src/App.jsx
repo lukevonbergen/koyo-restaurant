@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowIcon, CtaFlip, Logo } from './components/Layout'
+import useSEO from './hooks/useSEO'
 
 /* ═══════════════════════════════════════════════════════════
    DATA
@@ -175,6 +176,8 @@ const LOCATIONS_PREVIEW = [
    ═══════════════════════════════════════════════════════════ */
 
 export default function HomePage() {
+  useSEO()
+
   return (
     <main>
       <HeroCarousel />

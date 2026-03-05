@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { ArrowIcon, CtaFlip } from '../components/Layout'
+import useSEO from '../hooks/useSEO'
 
 /* ═══════════════════════════════════════════════════════════
    MENU DATA
@@ -213,6 +214,11 @@ function FilterBar({ active, onChange }) {
    ═══════════════════════════════════════════════════════════ */
 
 export default function MenuPage() {
+  useSEO({
+    title: 'Menu',
+    description: 'Explore the KOYO menu — sushi sets, maki, uramaki, dynamite rolls, ramen, katsu and more. Fresh Japanese food for dine-in and takeaway in Buckinghamshire.',
+  })
+
   const [activeCategory, setActiveCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
 

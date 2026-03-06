@@ -188,8 +188,8 @@ export function Navbar({ onMenuToggle, forceScrolled = false, mobileMenuOpen = f
       </div>
 
       <div className="flex items-center gap-3">
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="group/cta hidden sm:inline-flex items-center justify-center rounded-full font-body font-medium no-underline tracking-wide transition-all duration-300 overflow-hidden"
           style={{
             fontSize: '12px',
@@ -203,7 +203,7 @@ export function Navbar({ onMenuToggle, forceScrolled = false, mobileMenuOpen = f
         >
           <CtaFlip label="Contact Us" labelJa="お問い合わせ" />
           <ArrowIcon />
-        </a>
+        </Link>
         <button
           onClick={onMenuToggle}
           className={`lg:hidden flex items-center justify-center w-10 h-10 rounded-full border-none cursor-pointer bg-transparent transition-colors duration-300 ${
@@ -304,10 +304,10 @@ export function MobileMenu({ isOpen, onClose }) {
               transform: isOpen ? 'translateY(0)' : 'translateY(-8px)',
             }}
           >
-            <a href="/contact" onClick={onClose} className="group/cta inline-flex items-center px-6 py-3 rounded-full bg-text text-white text-[13px] font-body font-medium no-underline" tabIndex={isOpen ? 0 : -1}>
+            <Link to="/contact" onClick={onClose} className="group/cta inline-flex items-center px-6 py-3 rounded-full bg-text text-white text-[13px] font-body font-medium no-underline" tabIndex={isOpen ? 0 : -1}>
               <CtaFlip label="Contact Us" labelJa="お問い合わせ" />
               <ArrowIcon />
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
@@ -364,10 +364,10 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-start lg:items-end justify-start">
-            <a href="/contact" className="group/cta inline-flex items-center px-7 py-3 rounded-full text-white text-[13px] font-body font-medium no-underline transition-all duration-300 hover:bg-white hover:text-black" style={{ height: '40px', border: '1px solid rgba(255,255,255,0.3)' }}>
+            <Link to="/contact" className="group/cta inline-flex items-center px-7 py-3 rounded-full text-white text-[13px] font-body font-medium no-underline transition-all duration-300 hover:bg-white hover:text-black" style={{ height: '40px', border: '1px solid rgba(255,255,255,0.3)' }}>
               <CtaFlip label="Contact Us" labelJa="お問い合わせ" />
               <ArrowIcon />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
